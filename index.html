@@ -3,60 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Sharan Pachapuri - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .content-box {
+            background-color: white;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .project-list li {
+            margin: 10px 0;
+        }
+
+        .skills-list {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Hello, I'm Sharan Pachapuri 👋</h1>
-        <p>I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
+        <h1>Sharan Pachapuri</h1>
+        <p>Design and Analysis of Algorithms (Course Code: 24ECSC205)</p>
+        <p>Instructor: Mr. Mallikarjun Akki | KLE Technological</p>
     </header>
 
     <section>
-        <h2>🛠️ Projects</h2>
-        <ul>
-            <li><strong>Project 1</strong>: A short description of your project1.</li>
-            <li><strong>Project 2</strong>: A short description of another project2.</li>
-        </ul>
+        <div class="content-box">
+            <h2>🛠️ Projects</h2>
+            <div class="project-list">
+                <ul>
+                    <li><a href="#" class="button" onclick="showLabReflections()">Lab Reflections</a></li>
+                    <li><a href="#" class="button" onclick="showTheoryReflections()">Theory Reflections</a></li>
+                    <li><a href="#" class="button" onclick="showCourseProject()">Overview of Course Project</a></li>
+                    <li><a href="#" class="button" onclick="showMergeCode()">Merge Code</a></li>
+                </ul>
+            </div>
+        </div>
 
-        <h2>🚀 Skills</h2>
-        <ul>
-            <li>C++, Python</li>
-            <li>Data Structures and Algorithms</li>
-        </ul>
+        <div class="content-box">
+            <h2>🚀 Skills</h2>
+            <ul class="skills-list">
+                <li>C++, Python</li>
+                <li>Data Structures and Algorithms</li>
+            </ul>
+        </div>
 
-        <h2>🌐 Find Me Online</h2>
-        <ul>
-            <li><a href="https://github.com/SharanPachapuri" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/sharanpachapuri" target="_blank">LinkedIn</a></li>
-        </ul>
+        <div id="labReflections" class="content-box" style="display: none;">
+            <h2>Lab Reflections</h2>
+            <p><strong>Understanding these Concepts:</strong></p>
+            <ul>
+                <li>Time Complexity Analysis: Bridging theoretical time complexity with real-world performance.</li>
+                <li>Binary Search Trees (BST): Operations rely on recursion, especially deletion with two children.</li>
+                <li>Heap: Heapify, insertion, and deletion operations require careful study.</li>
+                <li>Sorting: Sorting algorithms like merge sort and quicksort require careful implementation.</li>
+                <li>Graph Algorithms: Understanding variations and algorithm proofs is challenging.</li>
+            </ul>
+            <p><strong>Correlating Concepts with Real-World Applications:</strong></p>
+            <ul>
+                <li>Binary Search Trees (BST): Used in databases for efficient data retrieval.</li>
+                <li>Heap: Useful in task schedulers and priority queues.</li>
+                <li>Sorting: Critical in large-scale data processing.</li>
+                <li>Graph Algorithms: Applications in GPS navigation systems.</li>
+            </ul>
+            <p><strong>Most Efficient Techniques for Complex Problems:</strong></p>
+            <ul>
+                <li>Understand the Problem: Fully grasp constraints and requirements.</li>
+                <li>Analyze Algorithms: Compare time and space complexities.</li>
+                <li>Pick the Right Data Structures: Simplify implementation by choosing the right one.</li>
+                <li>Optimize: Use techniques like caching or memoization.</li>
+            </ul>
+        </div>
 
-        <h2>Portfolio Topic</h2>
-        <dl>
-            <dt>Course Name</dt>
-            <dd>Design and Analysis of Algorithms</dd>
+        <div id="theoryReflections" class="content-box" style="display: none;">
+            <h2>Theory Reflections</h2>
+            <p><strong>Reflections on Problem-Solving and Design:</strong></p>
+            <ul>
+                <li>Determining the most efficient approach by analyzing time complexity and testing.</li>
+                <li>Balancing conflicting constraints by focusing on the key needs while testing alternatives.</li>
+                <li>Evaluating effectiveness by considering accuracy, efficiency, scalability, and user satisfaction.</li>
+                <li>Adapting solutions by adjusting for new challenges through flexibility and modifications.</li>
+            </ul>
+            <p><strong>Deciding between Simplicity and Optimization:</strong></p>
+            <ul>
+                <li>Prioritizing simplicity when the solution should be clear and maintainable.</li>
+                <li>Breaking down problems into smaller components to make them manageable.</li>
+            </ul>
+        </div>
 
-            <dt>Course Code</dt>
-            <dd>24ECSC205</dd>
+        <div id="courseProject" class="content-box" style="display: none;">
+            <h2>Overview of Course Project</h2>
+            <p>Project Link: <strong>Empty for now</strong></p>
+        </div>
 
-            <dt>Name</dt>
-            <dd>Sharan Pachapuri</dd>
+        <div id="mergeCode" class="content-box" style="display: none;">
+            <h2>Merge Code</h2>
+            <pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;tuple&gt;
+#include &lt;map&gt;
+#include &lt;queue&gt;
+#include &lt;limits&gt;
+#include &lt;iomanip&gt;
+#include &lt;string&gt;
+#include &lt;set&gt;
 
-            <dt>SRN</dt>
-            <dd>01fe23bcs027</dd>
+using namespace std;
 
-            <dt>Course Instructor</dt>
-            <dd>Mr. Mallikarjun Akki</dd>
-
-            <dt>University</dt>
-            <dd>KLE Technological</dd>
-
-            <dt>Portfolio Topic/Domain</dt>
-            <dd>Learnings</dd>
-        </dl>
-
-        <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
+// Customer queue management
+class CustomerQueue {
+    queue&lt;string&gt; customers;
+public:
+    void addCustomer(const string&amp; name) {
+        customers.push(name);
+    }
+    void removeCustomer() {
+        if (!customers.empty()) {
+            cout &lt;&lt; "Customer " &lt;&lt; customers.front() &lt;&lt; " has left.&lt;/n";
+            customers.pop();
+        } else {
+            cout &lt;&lt; "No customers in the queue.&lt;/n";
+        }
+    }
+    void displayQueue() {
+        if (customers.empty()) {
+            cout &lt;&lt; "No customers in the queue.&lt;/n";
+            return;
+        }
+        queue&lt;string&gt; temp = customers;
+        cout &lt;&lt; "Customers in the queue:&lt;/n";
+        while (!temp.empty()) {
+            cout &lt;&lt; temp.front() &lt;&lt; &lt;/n;
+            temp.pop();
+        }
+    }
+};
+            </code></pre>
+        </div>
     </section>
+
+    <footer>
+        <p>GitHub: <a href="https://github.com/sharanPach" target="_blank">https://github.com/sharanPach</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sharan-pachapuri-154b02320" target="_blank">Sharan Pachapuri</a></p>
+    </footer>
+
+    <script>
+        function showLabReflections() {
+            document.getElementById('labReflections').style.display = 'block';
+            document.getElementById('theoryReflections').style.display = 'none';
+            document.getElementById('courseProject').style.display = 'none';
+            document.getElementById('mergeCode').style.display = 'none';
+        }
+
+        function showTheoryReflections() {
+            document.getElementById('theoryReflections').style.display = 'block';
+            document.getElementById('labReflections').style.display = 'none';
+            document.getElementById('courseProject').style.display = 'none';
+            document.getElementById('mergeCode').style.display = 'none';
+        }
+
+        function showCourseProject() {
+            document.getElementById('courseProject').style.display = 'block';
+            document.getElementById('labReflections').style.display = 'none';
+            document.getElementById('theoryReflections').style.display = 'none';
+            document.getElementById('mergeCode').style.display = 'none';
+        }
+
+        function showMergeCode() {
+            document.getElementById('mergeCode').style.display = 'block';
+            document.getElementById('labReflections').style.display = 'none';
+            document.getElementById('theoryReflections').style.display = 'none';
+            document.getElementById('courseProject').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
